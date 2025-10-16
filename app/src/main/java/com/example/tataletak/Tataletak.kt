@@ -66,3 +66,8 @@ fun IniLatetakBoxColumnRow(modifier: Modifier = Modifier) {
                 .background(Color.Cyan),
             contentAlignment = Alignment.Center
         ) {
+            Image(
+                painter = gambar,
+                contentDescription = null,
+                contentScale = ContentScale.Fit
+            )
