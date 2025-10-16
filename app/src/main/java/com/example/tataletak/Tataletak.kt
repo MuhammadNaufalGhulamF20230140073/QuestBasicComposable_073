@@ -55,3 +55,14 @@ fun IniLatetakBoxColumnRow(modifier: Modifier = Modifier) {
                 }
             }
         }
+
+        Spacer(modifier = Modifier.height(10.dp))
+
+        // Bagian bawah (biru muda + gambar)
+        Box(
+            modifier = modifier
+                .fillMaxWidth()
+                .height(300.dp)
+                .background(Color.Cyan),
+            contentAlignment = Alignment.Center
+        ) {
