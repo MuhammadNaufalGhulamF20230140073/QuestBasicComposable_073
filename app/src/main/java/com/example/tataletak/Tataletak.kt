@@ -35,3 +35,23 @@ fun IniLatetakBoxColumnRow(modifier: Modifier = Modifier) {
                 .height(110.dp)
                 .background(Color.Yellow),
             contentAlignment = Alignment.Center
+        ) {
+            Column {
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Text("Coll_Row1_Komponen1")
+                    Text("Coll_Row1_Komponen2")
+                    Text("Coll_Row1_Komponen3")
+                }
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Text("Coll_Row2_Komponen1")
+                    Text("Coll_Row2_Komponen2")
+                    Text("Coll_Row2_Komponen3")
+                }
+            }
+        }
