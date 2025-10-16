@@ -13,3 +13,13 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            TataletakTheme { // ✅ nama fungsi theme harus sama persis
+                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    IniLatetakBoxColumnRow(
+                        modifier = Modifier.padding(innerPadding)
+                    )
+                }
+            }
+        }
+    }
+}
