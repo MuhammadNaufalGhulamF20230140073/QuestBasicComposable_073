@@ -24,16 +24,115 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun IniLatetakBoxColumnRow(modifier: Modifier = Modifier) {
-    val gambar = painterResource(id = R.drawable.notastokbok)
+fun TataletakColumn(modifier: Modifier) {
+    Column(modifier = modifier.padding(top = 20.dp, start = 20.dp, end = 20.dp)) {
+        Text(text = "Komponen1")
+        Text(text = "Komponen2")
+        Text(text = "Komponen3")
+        Text(text = "Komponen4")
+    }
+}
 
+@Composable
+fun TataletakRow(modifier: Modifier) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
+        Text(text = "Komponen1")
+        Text(text = "Komponen2")
+        Text(text = "Komponen3")
+        Text(text = "Komponen4")
+    }
+}
+
+@Composable
+fun TataletakBox(modifier: Modifier) {
+    Box(
+        modifier = modifier
+            .fillMaxHeight()
+            .fillMaxWidth(),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(text = "Box 1")
+        Text(text = "Column 1")
+        Text(text = "Row 1")
+        Text(text = "Box 2")
+        Text(text = "Column 2")
+    }
+}
+
+@Composable
+fun TataletakColumnRow(modifier: Modifier) {
     Column {
-        // Bagian atas (kuning)
+        // Baris1
+        Row(
+            modifier = modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
+            Text(text = "Komponen1Baris1")
+            Text(text = "Komponen2Baris1")
+            Text(text = "Komponen3Baris1")
+        }
+
+        // Baris2
+        Row(
+            modifier = modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
+            Text(text = "Komponen1Baris2")
+            Text(text = "Komponen2Baris2")
+            Text(text = "Komponen3Baris2")
+        }
+    }
+}
+
+@Composable
+fun TataletakRowColumn(modifier: Modifier) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
+        // Kolom1
+        Column {
+            Text(text = "Komponen1Kolom1")
+            Text(text = "Komponen2Kolom1")
+            Text(text = "Komponen3Kolom1")
+        }
+
+        // Kolom2
+        Column {
+            Text(text = "Komponen1Kolom2")
+            Text(text = "Komponen2Kolom2")
+        }
+    }
+}
+
+@Composable
+fun TataletakRowColumn2(modifier: Modifier) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceEvenly
+    ) {
+        // Kolom2
+        Column {
+            Text(text = "Komponen1Kolom2")
+            Text(text = "Komponen2Kolom2")
+            Text(text = "Komponen3Kolom2")
+        }
+    }
+}
+
+// Usage
+@Composable
+fun TataletakBoxColumnRow(modifier: Modifier) {
+    val gambar = painterResource(id = R.drawable.notastokbok)
+    Column {
         Box(
             modifier = modifier
                 .fillMaxWidth()
                 .height(110.dp)
-                .background(Color.Yellow),
+                .background(color = Color.Yellow),
             contentAlignment = Alignment.Center
         ) {
             Column {
@@ -41,29 +140,28 @@ fun IniLatetakBoxColumnRow(modifier: Modifier = Modifier) {
                     modifier = modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
-                    Text("Coll_Row1_Komponen1")
-                    Text("Coll_Row1_Komponen2")
-                    Text("Coll_Row1_Komponen3")
+                    Text(text = "Coll_Row1_Komponen1")
+                    Text(text = "Coll_Row1_Komponen2")
+                    Text(text = "Coll_Row1_Komponen3")
                 }
                 Row(
                     modifier = modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceEvenly
                 ) {
-                    Text("Coll_Row2_Komponen1")
-                    Text("Coll_Row2_Komponen2")
-                    Text("Coll_Row2_Komponen3")
+                    Text(text = "Coll_Row2_Komponen1")
+                    Text(text = "Coll_Row2_Komponen2")
+                    Text(text = "Coll_Row2_Komponen3")
                 }
             }
         }
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        // Bagian bawah (biru muda + gambar)
         Box(
             modifier = modifier
                 .fillMaxWidth()
                 .height(300.dp)
-                .background(Color.Cyan),
+                .background(color = Color.Cyan),
             contentAlignment = Alignment.Center
         ) {
             Image(
@@ -77,7 +175,7 @@ fun IniLatetakBoxColumnRow(modifier: Modifier = Modifier) {
                 color = Color.Red,
                 fontWeight = FontWeight.Bold,
                 fontFamily = FontFamily.Cursive,
-                modifier = Modifier.align(Alignment.Center)
+                modifier = Modifier.align(alignment = Alignment.Center)
             )
         }
     }
